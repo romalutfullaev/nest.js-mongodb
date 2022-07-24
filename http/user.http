@@ -1,0 +1,33 @@
+###  Create User
+POST http://localhost:3000/user/
+Content-Type: application/json
+
+{
+  "username": "john doe",
+  "email": "john177@gmail.com",
+  "password": "pass"
+}
+
+
+###  Get all Users
+GET http://localhost:3000/users/
+Content-Type: application/json
+Authorization: Bearer $argon2id$v=19$m=4096,t=3,p=1$7znIOUKQ8lCMSCmx1IDJJA$hg2kz1GHZRAh/z2AEFTJt9ljhIQcLMKhOce+LJkFc1Y
+
+
+###  Update User data
+PATCH http://localhost:3000/users/id
+Content-Type: application/json
+Authorization: Bearer $argon2id$v=19$m=4096,t=3,p=1$7znIOUKQ8lCMSCmx1IDJJA$hg2kz1GHZRAh/z2AEFTJt9ljhIQcLMKhOce+LJkFc1Y
+
+{
+  "username": "Roma",
+  "email": "johndoe@gmail.com",
+  "password": "password"
+}
+
+
+###  Delete User
+DELETE http://localhost:3000/users/id
+Content-Type: application/json
+Authorization: Bearer $argon2id$v=19$m=4096,t=3,p=1$7znIOUKQ8lCMSCmx1IDJJA$hg2kz1GHZRAh/z2AEFTJt9ljhIQcLMKhOce+LJkFc1Y
